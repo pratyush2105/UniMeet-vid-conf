@@ -1,8 +1,9 @@
 const express = require('express');
 const path = require('path');
 var app = express();
-var server = app.listen(3000, function () {
-    console.log("Listening on port 3000!");
+const PORT = process.env.PORT || 3000;
+var server = app.listen(PORT, function () {
+    console.log(`Listening on port ${PORT}!`);
 });
 const fs = require('fs');
 const fileUpload = require('express-fileupload');
